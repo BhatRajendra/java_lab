@@ -1,32 +1,28 @@
 package raj;
 import java.util.*;
-public class add_digits {
-	
-	
-	public static void dsum(int num)
+public class add_digits 
+{	
+	public static int calculateDigitsum(int a)
 	{
 		int sum=0;
-		while(num>0||sum>9)
+		while(a >0)
 		{
-			if(num==0)
-			{
-				num=sum;
-				sum=0;
-				
-			}
-			sum+=num%10;
-			num/=10;
-			
+			sum+=a%10;
+			a /=10;	
 		}
-		System.out.print(sum);
+		return sum;
 	}
-
 	public static void main(String[] args) 
 	{
-		Scanner sc=new Scanner(System.in);
-		System.out.println("Enter a number:");
-		int n=sc.nextInt();
-		dsum(n);
+		Scanner Sc= new Scanner(System.in);
+		System.out.println("Enter two digit number for the digitsum:  ");
+		int a=Sc.nextInt();
+		int digitsum = calculateDigitsum(a);
+		while(digitsum >=10)
+		{
+			digitsum =calculateDigitsum(digitsum);
+		}	
+		System.out.println("Final digit sum is:"+digitsum);
 	}
 
 }
