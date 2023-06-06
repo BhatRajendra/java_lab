@@ -1,0 +1,74 @@
+//which accepts a room number,mobile number,and name of the customer and generates a 
+//6character unique password
+package raj;
+import java.util.*;
+class password
+{	
+	String name;
+	int rn,sum=0;
+	long pn;
+	char fletter;
+	Scanner sc=new Scanner(System.in);
+	void read()
+	{
+		System.out.println("Enter your name:");
+		name=sc.next();
+		System.out.println("Enter your room number:");
+		rn=sc.nextInt();
+		System.out.println("Enter your phone number:");
+		pn=sc.nextLong();
+	}
+	char firstletter()
+	{
+		char[] n=name.toCharArray();
+		fletter=n[0];
+		return fletter;
+	}
+	long lastdigit()
+	{
+		long lastd=pn%10;
+		return lastd;		
+	}
+	int sumofroom()
+	{
+		while(sum >=10)
+		{
+			while(rn >0)
+			{
+				sum+=rn%10;
+				rn/=10;	
+			}
+		}
+		return sum;
+	}
+	char characters()
+	{
+		char[] ch= {'!','@','#','$','%','^','&','*'};
+		Random rand=new Random();
+		int randomnum=rand.nextInt(7);
+		return ch[randomnum];		
+	}
+	char lastletter()
+	{
+		char[] n=name.toCharArray();
+		char lastletter=n[n.length-1];
+		return lastletter;
+		
+	}
+}
+public class generation_password {
+
+	public static void main(String[] args) 
+	{
+		Scanner sc=new Scanner(System.in);
+		password ob=new password();
+		ob.read();
+		System.out.print(ob.firstletter());
+		System.out.print(ob.lastdigit());
+		System.out.print(ob.sumofroom());
+		System.out.print(ob.characters());
+		System.out.print(ob.lastletter());
+		
+		
+	}
+}
