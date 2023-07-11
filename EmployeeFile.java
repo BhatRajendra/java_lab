@@ -105,7 +105,7 @@ frameobj.add(p6);
 frameobj.add(p7);
 frameobj.add(p8);
 frameobj.add(p9);
-frameobj.add(0)p1;
+frameobj.add(p10);
 frameobj.setVisible(true);
 }
 }
