@@ -1,3 +1,4 @@
+
 //EmployeeFile.java
 import java.awt.Color;
 import java.awt.Dimension;
@@ -27,10 +28,10 @@ JPanel p7=new JPanel();
 JPanel p8=new JPanel();
 JPanel p9=new JPanel();
 JPanel p10=new JPanel();
-JLabel l1=new JLabel(&quot;NAME&quot;); //creating labels
-JLabel l2=new JLabel(&quot;ID&quot;);
-JLabel l3=new JLabel(&quot;DOJ&quot;);
-JLabel l4=new JLabel(&quot;DOB&quot;);
+JLabel l1=new JLabel("NAME"); //creating labels
+JLabel l2=new JLabel("ID");
+JLabel l3=new JLabel("DOJ");
+JLabel l4=new JLabel("DOB");
 JTextField f1=new JTextField(); //create obj for txtfield
 JTextField f2=new JTextField();
 JTextField f3=new JTextField();
@@ -40,27 +41,25 @@ f2.setPreferredSize(new Dimension(200,30));
 
 f3.setPreferredSize(new Dimension(200,30));
 f4.setPreferredSize(new Dimension(200,30));
-JButton b1=new JButton(&quot;SUBMIT&quot;);
-JButton b2=new JButton(&quot;RESET&quot;);
+JButton b1=new JButton("SUBMIT");
+JButton b2=new JButton("RESET");
 b1.addActionListener(new ActionListener()
 {
 @Override
 public void actionPerformed(ActionEvent e)
 {
-File fileobj=new File(&quot;/home/Admin/workspace/P10 - Employee
-
-File/File.txt&quot;);
+File fileobj=new File("/home/student/Desktop/file.txt");
 
 try
 {
 FileWriter fw=new FileWriter(fileobj.getAbsoluteFile(),true);
-System.out.println(&quot;\n NAME : &quot; +f1.getText() +&quot;\n&quot; +&quot;ID : &quot;
+System.out.println("\n NAME : " +f1.getText() +"\n" +"ID : "
 
-+f2.getText() +&quot;\n&quot; +&quot;DOJ : &quot; +f3.getText() +&quot;\n&quot; +&quot;DOB : &quot;+f4.getText() +&quot;\n&quot;);
++f2.getText() +"\n" +"DOJ :" +f3.getText() +"\n" +"DOB"+f4.getText() +"\n");
 
-fw.write(&quot;\n NAME : &quot; +f1.getText() +&quot;\n&quot; +&quot;ID : &quot; +f2.getText()
+fw.write("Name:" +f1.getText() +"\n"+"ID:"+f2.getText()
 
-+&quot;\n&quot; +&quot;DOJ : &quot; +f3.getText() +&quot;\n&quot; +&quot;DOB : &quot;+f4.getText() +&quot;\n&quot;);
++"\n" +"DOJ:"+f3.getText() +"\n" +"DOB"+f4.getText() +"\n");
 
 fw.close();
 }
@@ -75,7 +74,7 @@ b2.addActionListener(new ActionListener()
 @Override
 public void actionPerformed(ActionEvent e)
 {
-f1.setText(&quot; &quot;);
+f1.setText("");
 f2.setText(null);
 f3.setText(null);
 f4.setText(null);
@@ -106,7 +105,7 @@ frameobj.add(p6);
 frameobj.add(p7);
 frameobj.add(p8);
 frameobj.add(p9);
-frameobj.add(p10);
+frameobj.add(0)p1;
 frameobj.setVisible(true);
 }
 }
