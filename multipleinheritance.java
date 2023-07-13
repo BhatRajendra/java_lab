@@ -1,5 +1,5 @@
-package is122;
 
+package raj;
 import java.util.*;
 import java.io.*;
 interface one{
@@ -15,7 +15,7 @@ System.out.println("sum of"+a+"and"+b+"is:"+sum);
 }
 public void difference(int a,int b) {
 int difference=a-b;
-System.out.println("Difference of"+a+"and"+b+"is:"+difference);
+System.out.println("Difference of "+a+"and "+b+"is: "+difference);
 }
 }
 class multipleinheritance{
